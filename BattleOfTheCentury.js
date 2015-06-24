@@ -1,3 +1,4 @@
+
 /*
 	Battle of the Century
 	---------------------------------------
@@ -31,17 +32,30 @@ var joeHP = 4;
 var ronaldHP = 4;
 var game = true;
 
-function getRandom(min, max) {
-	return Math.random() * (max - min) + min;
-}
+// function getRandom(min, max) {
+// 	return Math.random() * (max - min) + min;
+// }
 
 function fight() {
 	// Joe Punches
-	console.log("Joe Throws a Jab...");
-	ronaldHP = ronaldHP - 1;
+	var joeHit = Math.floor(Math.random() * 2) + 1;
+
+	if (joeHit === 1) {
+	ronaldHP = ronaldHP - 1;	
+	console.log("Joe landed a huge hit!");
+	}
+	// console.log("Joe Throws a Jab...");
+	
+	
 	// Ronald Punches
-	console.log("Here comes Fat Ronald...");
-	joeHP = joeHP - 2;
+	var ronaldHit = Math.floor(Math.random() * 4) + 1;
+
+	if (ronaldHit === 1) {
+	joeHP = joeHP - 2;	
+	console.log("Ronald landed a huge hit!");
+	}
+	// console.log("Here comes Fat Ronald...");
+	
 	// Round Recap
 	console.log("After that round Joe's HP is at " + joeHP + " and Ronald's is at " + ronaldHP + "\n")
 	if (joeHP <= 0 || ronaldHP <= 0) {
@@ -57,4 +71,4 @@ var gameLoop = setInterval(function () {
 	if (!fight()) {
 		clearInterval(gameLoop); // clears the interval and stops the game
 	}
-}, 1000); //pauses the loop for 1 second and then reruns
+}, 1000); //pauses the loop for 1 second and then reruns 
