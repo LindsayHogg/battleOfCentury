@@ -39,9 +39,11 @@ function fight() {
 
 	if (joeHit === 1) {
 	ronaldHP = ronaldHP - 1;	
-	console.log("Joe landed a huge hit!");
+	console.log("Joe landed a huge hit!\n");
 	}
-
+	else {
+		console.log("Joe tries to throw a punch and misses like a newbie!\n")
+	}
 	
 	
 	// Ronald Punches
@@ -49,7 +51,10 @@ function fight() {
 
 	if (ronaldHit === 1) {
 	joeHP = joeHP - 2;	
-	console.log("Ronald landed a huge hit!");
+	console.log("Ronald landed a huge hit!\n");
+	}
+	else {
+		console.log("Ronald misses on a big swing, what a sucker!\n")
 	}
 	
 	
@@ -59,6 +64,7 @@ function fight() {
 		game = false;
 		console.log("Game over bitches");	
 	}
+
 
 	// Keep the loop going
 	return game;
