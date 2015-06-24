@@ -32,9 +32,6 @@ var joeHP = 4;
 var ronaldHP = 4;
 var game = true;
 
-// function getRandom(min, max) {
-// 	return Math.random() * (max - min) + min;
-// }
 
 function fight() {
 	// Joe Punches
@@ -44,7 +41,7 @@ function fight() {
 	ronaldHP = ronaldHP - 1;	
 	console.log("Joe landed a huge hit!");
 	}
-	// console.log("Joe Throws a Jab...");
+
 	
 	
 	// Ronald Punches
@@ -54,7 +51,7 @@ function fight() {
 	joeHP = joeHP - 2;	
 	console.log("Ronald landed a huge hit!");
 	}
-	// console.log("Here comes Fat Ronald...");
+	
 	
 	// Round Recap
 	console.log("After that round Joe's HP is at " + joeHP + " and Ronald's is at " + ronaldHP + "\n")
